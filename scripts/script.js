@@ -32,7 +32,7 @@ const verificarRegistro = async () => {
             queryParams.append('body', data.body);
             queryParams.append('cantidad', data.cantidad);
             queryParams.append('footer', data.footer);
-            window.location.href = `/sources/pase.html?${queryParams.toString()}`;
+            window.location.href = `https://strikerjuan.github.io/Pase-invitacion/?${queryParams.toString()}`;
         })
         .catch(error => {
             console.error("Error", error);
