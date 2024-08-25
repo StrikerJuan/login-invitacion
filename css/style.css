@@ -10,7 +10,7 @@
 }
 
 section{
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/fondo-1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,7 +36,7 @@ section{
     border: 1px solid white;
     border-radius: 10px;
     padding: 40px;
-    background-color: #c394efd9;
+    background-color: #82C0CC;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +70,7 @@ input{
 button{
     padding: 5px;
     width: 150px;
-    background-color: rgb(169, 44, 201);
+    background-color: #4DAA57;
     color: white;
     border: none;
     border-radius: 10px;
@@ -81,16 +81,16 @@ button{
 
 button:hover{
     cursor: pointer;
-    background-color: rgb(139, 16, 161); /* Cambia el color de fondo */
-    color: white; /* Cambia el color del texto */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Agrega una sombra */
-    transform: scale(1.1); /* Escala el botón al 110% */
+    background-color: #0D5D56;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
 
 }
 
 .carrusel-container{
     width: 100%;
-    background-color: #ffffffb0;
+    background-color: #79d1e2b0;
     z-index: 1;
 }
 
@@ -104,8 +104,11 @@ button:hover{
 
 .carrusel-header h1{
     color: #404040;
-}.carrusel-title h1{
-    color: #5421de;
+}
+.carrusel-title h1{
+    color: #7aed84;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .carrusel-header h1{
