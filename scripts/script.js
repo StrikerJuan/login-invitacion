@@ -1,5 +1,8 @@
 const verificarRegistro = async () => {
 
+    // Mostrar pantalla de carga
+    document.getElementById('loading-screen').style.display = 'flex';
+
     let usuario = $("#usuario").val();
     let password = $("#password").val();
 
@@ -26,6 +29,9 @@ const verificarRegistro = async () => {
             }
         })
         .then(data => {
+            // Ocultar pantalla de carga
+            document.getElementById('loading-screen').style.display = 'none';
+
             alert('Ingreso exitoso');
             const queryParams = new URLSearchParams();
             queryParams.append('header', data.header);
@@ -35,6 +41,9 @@ const verificarRegistro = async () => {
             window.location.href = `https://strikerjuan.github.io/Invitacion-Vanessa/?${queryParams.toString()}`;
         })
         .catch(error => {
+            // Ocultar pantalla de carga
+            document.getElementById('loading-screen').style.display = 'none';
+
             console.error("Error", error);
             alert('Usuario o contraseña erroneos');
         });
@@ -47,34 +56,3 @@ document.addEventListener('DOMContentLoaded', () => {
         verificarRegistro();
     });
 });
-
-
-/*
-const obtenerDatosUsuario = async () => {
-            try {
-                const response = await fetch('/verificaRegistro', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ usuario: 'usuario', password: 'password' }) // Cambia 'usuario' y 'password' por los valores reales
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    document.getElementById('header').textContent = data.header;
-                    document.getElementById('body').textContent = data.body;
-                    document.getElementById('cantidad').textContent = data.cantidad;
-                    document.getElementById('footer').textContent = data.footer;
-                } else {
-                    alert('Error al obtener los datos del usuario');
-                }
-            } catch (error) {
-                console.error('Error al obtener los datos del usuario:', error);
-                alert('Error al obtener los datos del usuario');
-            }
-        };
-
-        // Llamar a la función al cargar la página
-        window.onload = obtenerDatosUsuario();
-*/
